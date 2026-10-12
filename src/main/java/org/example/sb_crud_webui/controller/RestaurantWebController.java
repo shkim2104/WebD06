@@ -22,9 +22,9 @@ public class RestaurantWebController {
         return "restaurants/list";
     }
 
-    @GetMapping("restaurants/new")
+    @GetMapping("/restaurants/new")
     public String form(){
-        return "restauarnt/form";
+        return "restaurants/form";
     }
 
     @PostMapping("/restaurants")
