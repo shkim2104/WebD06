@@ -25,12 +25,12 @@
           <!-- POST /restaurants 로 전송, name 은 RestaurantRequest 필드명과 동일 -->
           <form th:action="@{/restaurants}" method="post">
             <div class="mb-3">
-              <label for="name" class="form-label">이름</label>
+              <label for="name" class="form-label">상호명</label>
               <input type="text" class="form-control" id="name" name="name" placeholder="예) 홍길동 식당" required>
             </div>
 
             <div class="mb-3">
-              <label for="location" class="form-label">위치</label>
+              <label for="location" class="form-label">도로명 주소</label>
               <input type="text" class="form-control" id="location" name="location" placeholder="예) 서울 강남구" required>
             </div>
 

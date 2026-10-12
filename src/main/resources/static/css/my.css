@@ -1,0 +1,9 @@
+/* Bootstrap 위에 덧붙이는 간단한 스타일 */
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", "Malgun Gothic", sans-serif;
+}
+
+.table td,
+.table th {
+    white-space: nowrap;
+}
