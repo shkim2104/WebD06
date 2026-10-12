@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class RestaurantWebController {
@@ -15,7 +16,7 @@ public class RestaurantWebController {
         this.restaurantService = restaurantService;
     }
 
-    @GetMapping("/restaruants")
+    @GetMapping("/restaurants")
     public String list(Model model){
         model.addAttribute("restaurants" , restaurantService.findAll());
         return "restaurants/list";
@@ -23,10 +24,10 @@ public class RestaurantWebController {
 
     @GetMapping("restaurants/new")
     public String form(){
-        return "restuarnt/form";
+        return "restauarnt/form";
     }
 
-    @GetMapping("restaurants")
+    @PostMapping("/restaurants")
     public String create(@ModelAttribute RestaurantRequest request){
         restaurantService.create(request);
         return "redirect:/restaurants";
